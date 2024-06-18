@@ -25,7 +25,15 @@ SECRET_KEY = "django-insecure-h5_tj%qb#mx+g-%9o_)+s+(7o0w)bzx05*1+9n!djyps5_(2qw
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    ".gryffindor.local"
+]
+
+if DEBUG:
+    ALLOWED_HOSTS += [
+        "localhost",
+        "127.0.0.1"
+    ]
 
 
 # Application definition
